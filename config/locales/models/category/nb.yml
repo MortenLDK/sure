@@ -1,0 +1,7 @@
+---
+nb:
+  models:
+    category:
+      uncategorized: Ukategorisert
+      other_investments: Andre investeringer
+      investment_contributions: Investeringsinnskudd

@@ -1,0 +1,229 @@
+---
+nb:
+  reports:
+    index:
+      title: Rapporter
+      subtitle: Omfattende innsikt i din økonomiske helse
+      export: Eksporter CSV
+      print_report: Skriv ut rapport
+      drag_to_reorder: "Dra for å endre rekkefølge"
+      toggle_section: "Vis/skjul seksjon"
+      periods:
+        monthly: Månedlig
+        quarterly: Kvartalsvis
+        ytd: Hittil i år
+        last_6_months: Siste 6 måneder
+        custom: Egendefinert periode
+      date_range:
+        from: Fra
+        to: Til
+      showing_period: "Viser data fra %{start} til %{end}"
+    invalid_date_range: "Sluttdato kan ikke være før startdato. Datoene er byttet om."
+    summary:
+      total_income: Total inntekt
+      total_expenses: Totale utgifter
+      net_savings: Netto sparing
+      budget_performance: Budsjettresultat
+      vs_previous: vs. forrige periode
+      income_minus_expenses: Inntekt minus utgifter
+      of_budget_used: av budsjettet brukt
+      no_budget_data: Ingen budsjettdata for denne perioden
+    budget_performance:
+      title: Budsjettresultat
+      spent: Brukt
+      budgeted: Budsjettert
+      remaining: Gjenstående
+      over_by: Over med
+      shared: delt
+      suggested_daily: "%{amount} anbefalt per dag for %{days} gjenstående dager"
+      no_budgets: Ingen budsjettkategorier satt opp for denne måneden
+      status:
+        good: I rute
+        warning: Nær grensen
+        over: Over budsjett
+    trends:
+      title: Trender og innsikt
+      monthly_breakdown: Månedlig oversikt
+      month: Måned
+      income: Inntekt
+      expenses: Utgifter
+      net: Netto
+      savings_rate: Sparerate
+      current: gjeldende
+      avg_monthly_income: Gj.sn. månedlig inntekt
+      avg_monthly_expenses: Gj.sn. månedlige utgifter
+      avg_monthly_savings: Gj.sn. månedlig sparing
+      no_data: Ingen trenddata tilgjengelig
+      spending_patterns: Forbruksmønstre
+      weekday_spending: Forbruk på hverdager
+      weekend_spending: Forbruk i helgen
+      total: Totalt
+      avg_per_transaction: Gj.sn. per transaksjon
+      transactions: Transaksjoner
+      insight_title: Innsikt
+      insight_higher_weekend: "Du bruker %{percent}% mer per transaksjon i helgen enn på hverdager"
+      insight_higher_weekday: "Du bruker %{percent}% mer per transaksjon på hverdager enn i helgen"
+      insight_similar: "Forbruket ditt per transaksjon er likt på hverdager og i helgen"
+      no_spending_data: Ingen forbruksdata tilgjengelig for denne perioden
+    empty_state:
+      title: Ingen data tilgjengelig
+      description: Begynn å spore økonomien din ved å legge til transaksjoner eller koble til kontoene dine for å se omfattende rapporter
+      add_transaction: Legg til transaksjon
+      add_account: Legg til konto
+    transactions_breakdown:
+      title: Aktivitetsoversikt
+      no_transactions: Ingen aktivitet funnet for valgt periode og filtre
+      filters:
+        title: Filtre
+        category: Kategori
+        account: Konto
+        tag: Etikett
+        amount_min: Minimumsbeløp
+        amount_max: Maksimumsbeløp
+        date_range: Datoperiode
+        all_categories: Alle kategorier
+        all_accounts: Alle kontoer
+        all_tags: Alle etiketter
+        apply: Bruk filtre
+        clear: Fjern filtre
+      sort:
+        label: Sorter etter
+        date_desc: Dato (nyeste)
+        amount_desc: Beløp (høy til lav)
+        amount_asc: Beløp (lav til høy)
+      export:
+        label: Eksporter
+        csv: CSV
+        excel: Excel
+        pdf: PDF
+        google_sheets: Åpne i Google Sheets
+      table:
+        category: Kategori
+        amount: Beløp
+        type: Type
+        expense: Utgifter
+        income: Inntekt
+        uncategorized: Ukategorisert
+        entries:
+          one: "%{count} oppføring"
+          other: "%{count} oppføringer"
+        percentage: "% av totalt"
+      pagination:
+        showing:
+          one: Viser %{count} oppføring
+          other: Viser %{count} oppføringer
+        previous: Forrige
+        next: Neste
+    net_worth:
+      title: Nettoformue
+      current_net_worth: Nåværende nettoformue
+      period_change: Periodens endring
+      assets_vs_liabilities: Eiendeler vs. gjeld
+      total_assets: Eiendeler
+      total_liabilities: Gjeld
+      no_assets: Ingen eiendeler
+      no_liabilities: Ingen gjeld
+    investment_performance:
+      title: Investeringsresultat
+      portfolio_value: Porteføljeverdi
+      total_return: Total avkastning
+      contributions: Periodens innskudd
+      withdrawals: Periodens uttak
+      top_holdings: Topp beholdninger
+      holding: Beholdning
+      weight: Vekt
+      value: Verdi
+      return: Avkastning
+      accounts: Investeringskontoer
+      gains_by_tax_treatment: Gevinst etter skattebehandling
+      unrealized_gains: Urealisert gevinst
+      realized_gains: Realisert gevinst
+      total_gains: Total gevinst
+      taxable_realized_note: Disse gevinstene kan være skattepliktige
+      no_data: "-"
+      view_details: Vis detaljer
+      holdings_count:
+        one: "%{count} beholdning"
+        other: "%{count} beholdninger"
+      sells_count:
+        one: "%{count} salg"
+        other: "%{count} salg"
+      holdings: Beholdninger
+      sell_trades: Salgshandler
+      and_more: "+%{count} til"
+    investment_flows:
+      title: Investeringsstrømmer
+      description: Spor penger som flyter inn og ut av investeringskontoene dine
+      contributions: Innskudd
+      withdrawals: Uttak
+      net_flow: Netto strøm
+    google_sheets_instructions:
+      title_with_key: "Kopier URL for Google Sheets"
+      title_no_key: "API-nøkkel kreves"
+      ready: CSV-URL-en din (med API-nøkkel) er klar.
+      steps: "Slik importerer du til Google Sheets:\n1. Opprett et nytt Google Sheet\n2. I celle A1, skriv inn formelen vist nedenfor\n3. Trykk Enter"
+      security_warning: "Denne URL-en inkluderer API-nøkkelen din. Hold den sikker!"
+      need_key: For å importere data til Google Sheets trenger du en API-nøkkel.
+      step1: "Gå til Innstillinger → API-nøkler"
+      step2: "Opprett en ny API-nøkkel med \"les\"-tillatelse"
+      step3: Kopier API-nøkkelen
+      step4: "Legg den til denne URL-en som: ?api_key=DIN_NØKKEL"
+      example: Eksempel
+      then_use: Bruk deretter den fullstendige URL-en med =IMPORTDATA() i Google Sheets.
+      open_sheets: Åpne Google Sheets
+      go_to_api_keys: Gå til API-nøkler
+      close: Forstått
+    print:
+      document_title: Finansrapport
+      title: Finansrapport
+      generated_on: "Generert %{date}"
+      # Sammendragsseksjon
+      summary:
+        title: Sammendrag
+        income: Inntekt
+        expenses: Utgifter
+        net_savings: Netto sparing
+        budget: Budsjett
+        vs_prior: "%{percent}% vs. forrige"
+        of_income: "%{percent}% av inntekt"
+        used: brukt
+      # Nettoformue-seksjon
+      net_worth:
+        title: Nettoformue
+        current_balance: Nåværende saldo
+        this_period: denne perioden
+        assets: Eiendeler
+        liabilities: Gjeld
+        no_liabilities: Ingen gjeld
+      # Månedlige trender-seksjon
+      trends:
+        title: Månedlige trender
+        month: Måned
+        income: Inntekt
+        expenses: Utgifter
+        net: Netto
+        savings_rate: Sparerate
+        average: Gjennomsnitt
+        current_month_note: "* Gjeldende måned (ufullstendige data)"
+      # Investeringer-seksjon
+      investments:
+        title: Investeringer
+        portfolio_value: Porteføljeverdi
+        total_return: Total avkastning
+        contributions: Innskudd
+        withdrawals: Uttak
+        this_period: denne perioden
+        top_holdings: Topp beholdninger
+        holding: Beholdning
+        weight: Vekt
+        value: Verdi
+        return: Avkastning
+      # Forbruk etter kategori-seksjon
+      spending:
+        title: Forbruk etter kategori
+        income: Inntekt
+        expenses: Utgifter
+        category: Kategori
+        amount: Beløp
+        percent: "%"
+        more_categories: "+ %{count} flere kategorier"

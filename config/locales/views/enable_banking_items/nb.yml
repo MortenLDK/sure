@@ -1,0 +1,49 @@
+---
+nb:
+  enable_banking_items:
+    authorize:
+      authorization_failed: Klarte ikke å starte autorisasjon
+      bank_required: Vennligst velg en bank.
+      invalid_redirect: Autorisasjons-URL-en som ble mottatt er ugyldig. Vennligst prøv igjen.
+      redirect_uri_not_allowed: Omdirigering ikke tillatt. Vennligst konfigurer `%{callback_url}` i innstillingene for Enable Banking-appen.
+      unexpected_error: En uventet feil oppstod. Vennligst prøv igjen.
+    callback:
+      authorization_error: Autorisasjon mislyktes
+      invalid_callback: Ugyldige tilbakekallingsparametere.
+      item_not_found: Tilkobling ikke funnet.
+      session_failed: Klarte ikke å fullføre autorisasjonen
+      success: Koblet til banken din. Kontoene dine synkroniseres nå.
+      unexpected_error: En uventet feil oppstod. Vennligst prøv igjen.
+    complete_account_setup:
+      all_skipped: Alle kontoer ble hoppet over. Du kan konfigurere dem senere på kontosiden.
+      no_accounts: Ingen kontoer tilgjengelig for oppsett.
+      success: Opprettet %{count} kontoer!
+    create:
+      success: Enable Banking-konfigurasjonen er fullført.
+    destroy:
+      success: Enable Banking-tilkoblingen er satt i kø for sletting.
+    link_accounts:
+      already_linked: De valgte kontoene er allerede koblet.
+      link_failed: Klarte ikke å koble kontoer
+      no_accounts_selected: Ingen kontoer valgt.
+      no_session: Ingen aktiv Enable Banking-tilkobling. Vennligst koble til en bank først.
+      success: Koblet %{count} kontoer.
+    link_existing_account:
+      success: Konto koblet til Enable Banking
+      errors:
+        only_manual: Bare manuelle kontoer kan kobles
+        invalid_enable_banking_account: Ugyldig Enable Banking-konto valgt
+    new:
+      link_enable_banking_title: Koble til Enable Banking
+    reauthorize:
+      invalid_redirect: Autorisasjons-URL-en som ble mottatt er ugyldig. Vennligst prøv igjen.
+      reauthorization_failed: Ny autorisasjon mislyktes
+    select_bank:
+      cancel: Avbryt
+      check_country: Vennligst sjekk landkodeinnstillingene dine.
+      credentials_required: Vennligst konfigurer Enable Banking-legitimasjonen din først.
+      description: Velg banken du vil koble til kontoene dine.
+      no_banks: Ingen banker tilgjengelig for dette landet/regionen.
+      title: Velg din bank
+    update:
+      success: Enable Banking-konfigurasjonen er oppdatert.

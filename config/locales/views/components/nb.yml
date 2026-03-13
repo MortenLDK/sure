@@ -1,0 +1,67 @@
+---
+nb:
+  provider_sync_summary:
+    title: Synkroniseringssammendrag
+    last_sync: "Siste synkronisering: %{time_ago} siden"
+    accounts:
+      title: Kontoer
+      total: "Totalt: %{count}"
+      linked: "Koblet: %{count}"
+      unlinked: "Ikke koblet: %{count}"
+      institutions: "Institusjoner: %{count}"
+    transactions:
+      title: Transaksjoner
+      seen: "Sett: %{count}"
+      imported: "Importert: %{count}"
+      updated: "Oppdatert: %{count}"
+      skipped: "Hoppet over: %{count}"
+      fetching: "Henter fra megler..."
+      protected:
+        one: "%{count} oppføring beskyttet (ikke overskrevet)"
+        other: "%{count} oppføringer beskyttet (ikke overskrevet)"
+      view_protected: Vis beskyttede oppføringer
+    skip_reasons:
+      excluded: Utelukket
+      user_modified: Brukerendret
+      import_locked: CSV-import
+      protected: Beskyttet
+    holdings:
+      title: Beholdninger
+      found: "Funnet: %{count}"
+      processed: "Behandlet: %{count}"
+    trades:
+      title: Handler
+      imported: "Importert: %{count}"
+      skipped: "Hoppet over: %{count}"
+      fetching: "Henter aktiviteter fra megler..."
+    health:
+      title: Status
+      view_error_details: Vis feildetaljer
+      rate_limited: "Hastighetsbegrenset %{time_ago}"
+      recently: nylig
+      errors: "Feil: %{count}"
+      pending_reconciled:
+        one: "%{count} duplikat ventende transaksjon avstemt"
+        other: "%{count} duplikat ventende transaksjoner avstemt"
+      view_reconciled: Vis avstemte transaksjoner
+      duplicate_suggestions:
+        one: "%{count} mulig duplikat trenger gjennomgang"
+        other: "%{count} mulige duplikater trenger gjennomgang"
+      view_duplicate_suggestions: Vis foreslåtte duplikater
+      stale_pending:
+        one: "%{count} foreldet ventende transaksjon (utelukket fra budsjetter)"
+        other: "%{count} foreldede ventende transaksjoner (utelukket fra budsjetter)"
+      view_stale_pending: Vis berørte kontoer
+      stale_pending_count:
+        one: "%{count} transaksjon"
+        other: "%{count} transaksjoner"
+      stale_unmatched:
+        one: "%{count} ventende transaksjon trenger manuell gjennomgang"
+        other: "%{count} ventende transaksjoner trenger manuell gjennomgang"
+      view_stale_unmatched: Vis transaksjoner som trenger gjennomgang
+      stale_unmatched_count:
+        one: "%{count} transaksjon"
+        other: "%{count} transaksjoner"
+      data_warnings: "Datadvarsler: %{count}"
+      notices: "Meldinger: %{count}"
+      view_data_quality: Vis datakvalitetsdetaljer

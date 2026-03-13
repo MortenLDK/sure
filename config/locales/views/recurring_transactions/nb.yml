@@ -1,0 +1,52 @@
+---
+nb:
+  recurring_transactions:
+    title: Faste transaksjoner
+    upcoming: Kommende faste transaksjoner
+    projected: Forventet
+    recurring: Fast
+    expected_today: "Forventet i dag"
+    expected_in:
+      one: "Forventet om %{count} dag"
+      other: "Forventet om %{count} dager"
+    day_of_month: Dag %{day} i måneden
+    identify_patterns: Identifiser mønstre
+    cleanup_stale: Rydd opp foreldede
+    settings:
+      enable_label: Aktiver faste transaksjoner
+      enable_description: Oppdag automatisk mønstre for faste transaksjoner og vis kommende forventede transaksjoner.
+    settings_updated: Innstillinger for faste transaksjoner er oppdatert
+    info:
+      title: Automatisk mønstergjenkjenning
+      manual_description: Du kan manuelt identifisere mønstre eller rydde opp foreldede faste transaksjoner med knappene ovenfor.
+      automatic_description: "Automatisk identifikasjon kjøres også etter:"
+      triggers:
+        - CSV-importer fullføres (transaksjoner, handler, kontoer, osv.)
+        - Enhver leverandørsynkronisering fullføres (Plaid, SimpleFIN, osv.)
+    identified: Identifiserte %{count} mønstre for faste transaksjoner
+    cleaned_up: Ryddet opp %{count} foreldede faste transaksjoner
+    marked_inactive: Fast transaksjon markert som inaktiv
+    marked_active: Fast transaksjon markert som aktiv
+    deleted: Fast transaksjon slettet
+    confirm_delete: Er du sikker på at du vil slette denne faste transaksjonen?
+    marked_as_recurring: Transaksjon markert som fast
+    already_exists: En manuell fast transaksjon finnes allerede for dette mønsteret
+    creation_failed: Klarte ikke å opprette fast transaksjon. Vennligst kontroller transaksjonsdetaljene og prøv igjen.
+    unexpected_error: En uventet feil oppstod under opprettelse av den faste transaksjonen
+    amount_range: "Spenn: %{min} til %{max}"
+    empty:
+      title: Ingen faste transaksjoner funnet
+      description: Klikk "Identifiser mønstre" for å automatisk oppdage faste transaksjoner fra transaksjonshistorikken din.
+    table:
+      merchant: Navn
+      amount: Beløp
+      expected_day: Forventet dag
+      next_date: Neste dato
+      last_occurrence: Siste forekomst
+      status: Status
+      actions: Handlinger
+    status:
+      active: Aktiv
+      inactive: Inaktiv
+    badges:
+      manual: Manuell
