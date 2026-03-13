@@ -16,22 +16,21 @@ service: sure-kirkvik
 
 # GHCR: free for private repos on any GitHub plan, Kamal supports it natively.
 # Replace GITHUB_USERNAME with the username of the account that owns the fork.
-image: ghcr.io/GITHUB_USERNAME/sure-kirkvik
+image: ghcr.io/mortenldk/sure-kirkvik
 
 servers:
   web:
     hosts:
-      # Fill in the DigitalOcean droplet IP address during Plan 04
-      - DROPLET_IP_HERE
+      - 142.93.139.86
 
 proxy:
-  ssl: true
-  host: frihetsformuen.no
+  ssl: false
+  host: 142.93.139.86
   app_port: 3000
 
 registry:
   server: ghcr.io
-  username: GITHUB_USERNAME
+  username: MortenLDK
   password:
     - KAMAL_REGISTRY_PASSWORD
 
@@ -42,10 +41,10 @@ builder:
 
 env:
   clear:
-    RAILS_FORCE_SSL: "true"
-    RAILS_ASSUME_SSL: "true"
+    RAILS_FORCE_SSL: "false"
+    RAILS_ASSUME_SSL: "false"
     SELF_HOSTED: "true"
-    APP_DOMAIN: frihetsformuen.no
+    APP_DOMAIN: 142.93.139.86
     DB_HOST: sure-kirkvik-db
     DB_PORT: 5432
     REDIS_URL: redis://sure-kirkvik-redis:6379/1
@@ -59,7 +58,7 @@ env:
 accessories:
   db:
     image: postgres:16
-    host: DROPLET_IP_HERE
+    host: 142.93.139.86
     port: "127.0.0.1:5432:5432"
     env:
       clear:
@@ -79,7 +78,7 @@ accessories:
 
   redis:
     image: redis:7-alpine
-    host: DROPLET_IP_HERE
+    host: 142.93.139.86
     port: "127.0.0.1:6379:6379"
     # maxmemory 256mb: prevents OOM on 4GB droplet (Rails ~1GB, PG ~1GB, Redis 256MB, Sidekiq ~512MB)
     # appendonly yes: persistence — Redis data survives container restart
