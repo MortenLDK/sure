@@ -140,7 +140,7 @@ class Period
     end
   end
 
-  def initialize(start_date: nil, end_date: nil, key: nil, date_format: "%b %d, %Y")
+  def initialize(start_date: nil, end_date: nil, key: nil, date_format: "%d.%m.%Y")
     @key = key
     @start_date = start_date
     @end_date = end_date

@@ -66,7 +66,7 @@ module ApplicationHelper
     if format_code.present?
       date.strftime(format_code)
     else
-      I18n.l(date, format: format, **options)
+      date.strftime("%d.%m.%Y")
     end
   end
 
