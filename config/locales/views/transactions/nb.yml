@@ -1,6 +1,7 @@
 ---
 nb:
   transactions:
+    unknown_name: Ukjent transaksjon
     form:
       account: Konto
       account_prompt: Velg en konto
@@ -40,15 +41,128 @@ nb:
       settings: Innstillinger
       tags_label: Tagger
       uncategorized: "(ukategorisert)"
+      tab_transactions: Transaksjoner
+      tab_upcoming: Kommende
+      exclude: Ekskluder
+      exclude_description: Ekskluderte transaksjoner blir fjernet fra budsjetteberegninger og rapporter.
+      activity_type: Aktivitetstype
+      activity_type_description: Type investeringsaktivitet (Kjøp, Salg, Utbytte osv.). Automatisk oppdaget eller satt manuelt.
+      one_time_title: "Engangs %{type}"
+      one_time_description: Engangstransaksjoner vil bli ekskludert fra visse budsjetteberegninger og rapporter for å hjelpe deg se hva som virkelig betyr noe.
+      convert_to_trade_title: Konverter til verdipapirhandel
+      convert_to_trade_description: Konverter denne transaksjonen til et kjøp eller salg med verdipapirdetaljer for porteføljesporing.
+      convert_to_trade_button: Konverter til handel
+    activity_labels:
+      buy: Kjøp
+      sell: Salg
+      sweep_in: Overføring inn
+      sweep_out: Overføring ut
+      dividend: Utbytte
+      reinvestment: Reinvestering
+      interest: Rente
+      fee: Gebyr
+      transfer: Overføring
+      contribution: Innskudd
+      withdrawal: Uttak
+      exchange: Veksling
+      other: Annet
+    mark_recurring: Merk som gjentagende
+    mark_recurring_subtitle: Spor dette som en gjentagende transaksjon. Beløpsvariasjon beregnes automatisk fra siste 6 måneder med lignende transaksjoner.
+    mark_recurring_title: Gjentagende transaksjon
+    potential_duplicate_title: Mulig duplikat oppdaget
+    potential_duplicate_description: Denne ventende transaksjonen kan være den samme som den posterte transaksjonen nedenfor. Hvis ja, slå dem sammen for å unngå dobbelttelling.
+    merge_duplicate: Ja, slå dem sammen
+    keep_both: Nei, behold begge
+    transaction:
+      pending: Ventende
+      pending_tooltip: Ventende transaksjon — kan endres når den posteres
+      linked_with_plaid: Koblet med Plaid
+      activity_type_tooltip: Investeringsaktivitetstype
+      possible_duplicate: Duplikat?
+      potential_duplicate_tooltip: Dette kan være et duplikat av en annen transaksjon
+      review_recommended: Gjennomgang
+      review_recommended_tooltip: Stor beløpsforskjell — gjennomgang anbefales for å sjekke om dette er et duplikat
+    merge_duplicate:
+      success: Transaksjoner slått sammen
+      failure: Kunne ikke slå sammen transaksjoner
+    dismiss_duplicate:
+      success: Beholdt som separate transaksjoner
+      failure: Kunne ikke avvise duplikatforslag
     header:
+      new_rule: Ny regel
+      edit_rules: Rediger regler
       edit_categories: Rediger kategorier
       edit_imports: Rediger importer
       edit_merchants: Rediger selgere
       edit_tags: Rediger tagger
       import: Importer
     index:
+      title: Transaksjoner
       transaction: transaksjon
       transactions: transaksjoner
+      import: Importer
+    summary:
+      total_transactions: Totalt transaksjoner
+      income: Inntekt
+      expenses: Utgifter
+    list:
+      drag_drop_title: Slipp CSV for å importere
+      drag_drop_subtitle: Last opp transaksjoner direkte
+      transaction: transaksjon
+      transactions: transaksjoner
+    toggle_recurring_section: Vis/skjul kommende gjentagende transaksjoner
+    search:
+      filters:
+        account: Konto
+        date: Dato
+        type: Type
+        status: Status
+        amount: Beløp
+        category: Kategori
+        tag: Tag
+        merchant: Selger
+    convert_to_trade:
+      title: Konverter til verdipapirhandel
+      description: Konverter denne transaksjonen til en handel med verdipapirdetaljer
+      date_label: "Dato:"
+      account_label: "Konto:"
+      amount_label: "Beløp:"
+      security_label: Verdipapir
+      security_prompt: Velg et verdipapir...
+      security_custom: "+ Skriv inn egendefinert ticker"
+      security_not_listed_hint: Finner du ikke verdipapiret ditt? Velg "Skriv inn egendefinert ticker" nederst i listen.
+      ticker_placeholder: AAPL
+      ticker_hint: Skriv inn aksje-/ETF-tickersymbol (f.eks. AAPL, MSFT)
+      ticker_search_placeholder: Søk etter ticker...
+      ticker_search_hint: Søk etter tickersymbol eller selskapsnavn, eller skriv inn en egendefinert ticker
+      price_mismatch_title: Prisen stemmer kanskje ikke
+      price_mismatch_message: "Prisen din (%{entered_price}/aksje) avviker betydelig fra %{ticker}s gjeldende markedspris (%{market_price}). Hvis dette virker feil, kan du ha valgt feil verdipapir — prøv å bruke \"Skriv inn egendefinert ticker\" for å spesifisere riktig."
+      quantity_label: Antall (aksjer)
+      quantity_placeholder: f.eks. 20
+      quantity_hint: Antall aksjer handlet
+      price_label: Pris per aksje
+      price_placeholder: f.eks. 52,15
+      price_hint: "Pris per aksje (%{currency})"
+      qty_or_price_hint: "Skriv inn minst antall ELLER pris. Den andre beregnes fra transaksjonsbeløpet (%{amount})."
+      trade_type_label: Handelstype
+      trade_type_hint: Kjøp eller salg av aksjer i et verdipapir
+      exchange_label: Børs (valgfritt)
+      exchange_placeholder: XNAS
+      exchange_hint: La stå tomt for automatisk oppdagelse
+      cancel: Avbryt
+      submit: Konverter til handel
+      success: Transaksjon konvertert til handel
+      conversion_note: "Konvertert fra transaksjon: %{original_name} (%{original_date})"
+      errors:
+        not_investment_account: Kun transaksjoner i investeringskontoer kan konverteres til handler
+        already_converted: Denne transaksjonen er allerede konvertert eller ekskludert
+        enter_ticker: Vennligst skriv inn et tickersymbol
+        security_not_found: Valgt verdipapir finnes ikke lenger. Vennligst velg et annet.
+        select_security: Vennligst velg eller skriv inn et verdipapir
+        enter_qty_or_price: Vennligst skriv inn enten antall eller pris per aksje. Den andre beregnes fra transaksjonsbeløpet.
+        invalid_qty_or_price: Ugyldig antall eller pris. Vennligst skriv inn gyldige positive verdier.
+        conversion_failed: "Kunne ikke konvertere transaksjon: %{error}"
+        unexpected_error: "Uventet feil under konvertering: %{error}"
     searches:
       filters:
         amount_filter:
@@ -62,10 +176,15 @@ nb:
           on_or_after: på eller etter %{date}
           on_or_before: på eller før %{date}
           transfer: Overføring
+          confirmed: Bekreftet
+          pending: Ventende
         type_filter:
           expense: Utgift
           income: Inntekt
           transfer: Overføring
+        status_filter:
+          confirmed: Bekreftet
+          pending: Ventende
       menu:
         account_filter: Konto
         amount_filter: Beløp
@@ -77,9 +196,12 @@ nb:
         merchant_filter: Selger
         tag_filter: Tag
         type_filter: Type
+        status_filter: Status
       search:
         equal_to: lik
         greater_than: større enn
         less_than: mindre enn
       form:
         toggle_selection_checkboxes: Veksle alle avkryssingsbokser
+        search_placeholder: "Søk i transaksjoner ..."
+        filter: Filter

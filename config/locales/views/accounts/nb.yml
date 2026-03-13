@@ -2,6 +2,9 @@
 nb:
   accounts:
     account:
+      link_lunchflow: Koble med Lunch Flow
+      link_provider: Koble med leverandør
+      unlink_provider: Koble fra leverandør
       troubleshoot: Feilsøk
     chart:
       data_not_available: Data ikke tilgjengelig for den valgte perioden
@@ -15,20 +18,31 @@ nb:
       no_accounts: Ingen kontoer enda
     form:
       balance: Nåværende balanse
+      opening_balance_date_label: Dato for åpningsbalanse
       name_label: Kontonavn
       name_placeholder: Eksempel på kontonavn
+      additional_details: Tilleggsdetaljer
+      institution_name_label: Institusjonsnavn
+      institution_name_placeholder: f.eks. DNB
+      institution_domain_label: Institusjonsdomene
+      institution_domain_placeholder: f.eks. dnb.no
+      notes_label: Notater
+      notes_placeholder: Lagre tilleggsinformasjon som kontonumre, IBAN, etc.
     index:
       accounts: Kontoer
       manual_accounts:
         other_accounts: Andre kontoer
       new_account: Ny konto
       sync: Synkroniser alle
+    sync_all:
+      syncing: "Synkroniserer kontoer..."
     new:
       import_accounts: Importer kontoer
       method_selector:
         connected_entry: Koble til konto
         connected_entry_eu: Koble til EU-konto
         link_with_provider: "Koble til %{provider}"
+        lunchflow_entry: Koble Lunch Flow-konto
         manual_entry: Angi kontobalanse
         title: Hvordan vil du legge den til?
       title: Hva vil du legge til?
@@ -36,13 +50,22 @@ nb:
       activity:
         amount: Beløp
         balance: Balanse
+        confirmed: Bekreftet
         date: Dato
         entries: oppføringer
         entry: oppføring
+        filter: Filter
         new: Ny
+        new_activity: Ny aktivitet
         new_balance: Ny balanse
+        new_trade: Ny handel
         new_transaction: Ny transaksjon
+        new_transfer: Ny overføring
         no_entries: Ingen oppføringer funnet
+        pending: Ventende
+        search:
+          placeholder: Søk i oppføringer etter navn
+        status: Status
         title: Aktivitet
       chart:
         balance: Balanse
@@ -56,6 +79,64 @@ nb:
         manage: Administrer kontoer
     update:
       success: "%{type} konto oppdatert"
+    sidebar:
+      missing_data: Manglende historiske data
+      missing_data_description: "%{product} bruker tredjepartsleverandører for å hente historiske valutakurser, verdipapirpriser og mer. Disse dataene er nødvendige for å beregne nøyaktige historiske kontosaldoer."
+      configure_providers: Konfigurer leverandørene dine her.
+      tabs:
+        all: Alle
+        assets: Eiendeler
+        debts: Gjeld
+      new_asset: Ny eiendel
+      new_debt: Ny gjeld
+      new_account: Ny konto
+      new_account_group: "Ny %{account_group}"
+    types:
+      depository: Bankkonto
+      investment: Investering
+      crypto: Krypto
+      property: Eiendom
+      vehicle: Kjøretøy
+      other_asset: Annen eiendel
+      credit_card: Kredittkort
+      loan: Lån
+      other_liability: Annen gjeld
+    tax_treatments:
+      taxable: Skattepliktig
+      tax_deferred: Skatteutsatt
+      tax_exempt: Skattefri
+      tax_advantaged: Skattefordelt
+    tax_treatment_descriptions:
+      taxable: Gevinst beskattes ved realisering
+      tax_deferred: Fradragsberettigede innskudd, beskattes ved uttak
+      tax_exempt: Innskudd etter skatt, gevinst ikke beskattet
+      tax_advantaged: Særlige skattefordeler med vilkår
+    subtype_regions:
+      us: USA
+      uk: Storbritannia
+      ca: Canada
+      au: Australia
+      eu: Europa
+      generic: Generelt
+    confirm_unlink:
+      title: Koble konto fra leverandør?
+      description_html: "Du er i ferd med å koble fra <strong>%{account_name}</strong> fra <strong>%{provider_name}</strong>. Dette konverterer den til en manuell konto."
+      warning_title: Hva dette betyr
+      warning_no_sync: Kontoen vil ikke lenger synkroniseres automatisk med leverandøren din
+      warning_manual_updates: Du må legge til transaksjoner og oppdatere saldoer manuelt
+      warning_transactions_kept: Alle eksisterende transaksjoner og saldoer bevares
+      warning_can_delete: Etter frakobling kan du slette kontoen om nødvendig
+      confirm_button: Bekreft og koble fra
+    unlink:
+      success: "Kontoen er frakoblet. Den er nå en manuell konto."
+      not_linked: "Kontoen er ikke koblet til en leverandør"
+      error: "Kunne ikke koble fra konto: %{error}"
+      generic_error: "En uventet feil oppstod. Vennligst prøv igjen."
+    select_provider:
+      title: Velg en leverandør å koble til
+      description: "Velg hvilken leverandør du vil bruke til å koble %{account_name}"
+      already_linked: "Kontoen er allerede koblet til en leverandør"
+      no_providers: "Ingen leverandører er konfigurert for øyeblikket"
   email_confirmations:
     new:
       invalid_token: Ugyldig eller utløpt bekreftelseslenke.

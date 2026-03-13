@@ -8,3 +8,12 @@ nb:
       tabs:
         actual: Faktisk
         budgeted: Budsjettert
+    copy_previous_prompt:
+      title: "Sett opp budsjettet ditt"
+      description: "Du kan kopiere budsjettet fra %{source_name} eller starte på nytt."
+      copy_button: "Kopier fra %{source_name}"
+      fresh_button: "Start på nytt"
+    copy_previous:
+      success: "Budsjett kopiert fra %{source_name}"
+      no_source: "Ingen tidligere budsjett funnet å kopiere fra"
+      already_initialized: "Dette budsjettet er allerede satt opp"

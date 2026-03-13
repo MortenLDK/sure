@@ -3,7 +3,20 @@ nb:
   pages:
     changelog:
       title: Hva er nytt
+    privacy:
+      title: Personvern
+      heading: Personvern
+      placeholder: Innhold for personvernerklæring vises her.
+    terms:
+      title: Vilkår for bruk
+      heading: Vilkår for bruk
+      placeholder: Innhold for vilkår for bruk vises her.
     dashboard:
+      welcome: "Velkommen tilbake, %{name}"
+      subtitle: "Her er hva som skjer med økonomien din"
+      new: "Ny"
+      drag_to_reorder: "Dra for å omorganisere seksjon"
+      toggle_section: "Veksle seksjonssynlighet"
       net_worth_chart:
         data_not_available: Data ikke tilgjengelig for den valgte perioden
         title: Nettoformue
@@ -12,3 +25,35 @@ nb:
         no_account_subtitle: Siden ingen kontoer er lagt til, er det ingen data å
           vise. Legg til dine første kontoer for å begynne å vise dashboard-data.
         no_account_title: Ingen kontoer enda
+      no_accounts:
+        title: "Ingen kontoer enda"
+        description: "Legg til kontoer for å vise nettoverdidata"
+        add_account: "Legg til konto"
+      balance_sheet:
+        title: "Balanseoversikt"
+        no_items: "Ingen %{name} enda"
+        add_accounts: "Legg til %{name}-kontoer for å se en fullstendig oversikt"
+      cashflow_sankey:
+        title: "Kontantstrøm"
+        no_data_title: "Ingen kontantstrømdata for denne tidsperioden"
+        no_data_description: "Legg til transaksjoner for å vise kontantstrømdata eller utvid tidsperioden"
+        add_transaction: "Legg til transaksjon"
+      outflows_donut:
+        title: "Utgående"
+        total_outflows: "Totalt utgående"
+        categories: "Kategorier"
+        value: "Verdi"
+        weight: "Andel"
+      investment_summary:
+        title: "Investeringer"
+        total_return: "Total avkastning"
+        holding: "Beholdning"
+        weight: "Andel"
+        value: "Verdi"
+        return: "Avkastning"
+        period_activity: "%{period} aktivitet"
+        contributions: "Innskudd"
+        withdrawals: "Uttak"
+        trades: "Handler"
+        no_investments: "Ingen investeringskontoer"
+        add_investment: "Legg til en investeringskonto for å spore porteføljen din"
