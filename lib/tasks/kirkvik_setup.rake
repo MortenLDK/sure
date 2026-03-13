@@ -19,6 +19,10 @@ namespace :kirkvik do
     puts "  Timezone:    #{family.timezone}"
     puts "  Date format: #{family.date_format}"
     puts "  Country:     #{family.country}"
+    # Set all existing users to Norwegian locale
+    updated = family.users.where.not(locale: "nb").update_all(locale: "nb")
+    puts "  Users updated: #{updated}" if updated > 0
+
     puts ""
     puts "Done. Norwegian settings active."
   end
