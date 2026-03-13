@@ -1,0 +1,5 @@
+---
+nb:
+  chats:
+    demo_banner_title: "Demomodus aktiv"
+    demo_banner_message: "Du bruker en Qwen3 LLM med åpen vekt med kreditter fra Cloudflare Workers AI. Resultater kan variere siden kodebasen primært er testet med `gpt-4.1`, men tokenene dine brukes ikke til trening!"

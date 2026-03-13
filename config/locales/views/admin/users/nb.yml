@@ -1,0 +1,48 @@
+---
+nb:
+  admin:
+    users:
+      index:
+        title: "Brukeradministrasjon"
+        description: "Administrer brukerroller for din instans. Superadministratorer kan tilgang til SSO-leverandorinnstillinger og brukeradministrasjon."
+        section_title: "Familier / Grupper"
+        you: "(Deg)"
+        trial_ends_at: "Proveperiode slutter"
+        not_available: "i/t"
+        no_users: "Ingen brukere funnet."
+        unnamed_family: "Navnlos familie/gruppe"
+        no_subscription: "Intet abonnement"
+        family_summary: "%{members} medlemmer · %{accounts} kontoer · %{transactions} transaksjoner"
+        filters:
+          role: "Rolle"
+          role_all: "Alle roller"
+          trial_status: "Proveperiodestatus"
+          trial_all: "Alle"
+          trial_expiring_soon: "Utloper om 7 dager"
+          trial_trialing: "Pa proveperiode"
+          submit: "Filtrer"
+        summary:
+          trials_expiring_7_days: "Proveperioder som utloper innen 7 dager"
+        table:
+          user: "Bruker"
+          trial_ends_at: "Proveperiode slutter"
+          family_accounts: "Familiekontoer"
+          family_transactions: "Familietransaksjoner"
+          last_login: "Siste innlogging"
+          session_count: "Antall sesjoner"
+          never: "Aldri"
+          role: "Rolle"
+        role_descriptions_title: "Rollbeskrivelser"
+        roles:
+          guest: "Gjest"
+          member: "Medlem"
+          admin: "Administrator"
+          super_admin: "Superadministrator"
+        role_descriptions:
+          guest: "Assistent-forst opplevelse med bevisst begrensede tillatelser for introduksjonsprosesser."
+          member: "Grunnleggende brukertilgang. Kan administrere egne kontoer, transaksjoner og innstillinger."
+          admin: "Familieadministrator. Kan tilgang til avanserte innstillinger som API-nokler, importer og AI-prompts."
+          super_admin: "Instansadministrator. Kan administrere SSO-leverandorer, brukerroller og etterligne brukere for stotte."
+      update:
+        success: "Brukerrolle oppdatert."
+        failure: "Kunne ikke oppdatere brukerrolle."

@@ -1,0 +1,78 @@
+---
+nb:
+  coinbase_items:
+    create:
+      default_name: Coinbase
+      success: Koblet til Coinbase! Kontoene dine synkroniseres.
+    update:
+      success: Coinbase-konfigurasjonen er oppdatert.
+    destroy:
+      success: Coinbase-tilkoblingen er planlagt for sletting.
+    setup_accounts:
+      title: Importer Coinbase-lommeboker
+      subtitle: Velg hvilke lommeboker du vil spore
+      instructions: Velg lommebokene du vil importere. Ikke-valgte lommeboker forblir tilgjengelige hvis du vil legge dem til senere.
+      no_accounts: Alle lommeboker er importert.
+      accounts_count:
+        one: "%{count} lommebok tilgjengelig"
+        other: "%{count} lommeboker tilgjengelige"
+      select_all: Velg alle
+      import_selected: Importer valgte
+      cancel: Avbryt
+      creating: Importerer...
+    complete_account_setup:
+      success:
+        one: "Importerte %{count} lommebok"
+        other: "Importerte %{count} lommeboker"
+      none_selected: Ingen lommeboker valgt
+      no_accounts: Ingen lommeboker å importere
+    coinbase_item:
+      provider_name: Coinbase
+      syncing: Synkroniserer...
+      reconnect: Legitimasjon trenger oppdatering
+      deletion_in_progress: Sletter...
+      sync_status:
+        no_accounts: Ingen kontoer funnet
+        all_synced:
+          one: "%{count} konto synkronisert"
+          other: "%{count} kontoer synkronisert"
+        partial_sync: "%{linked_count} synkronisert, %{unlinked_count} trenger oppsett"
+      status: "Sist synkronisert for %{timestamp} siden"
+      status_with_summary: "Sist synkronisert for %{timestamp} siden - %{summary}"
+      status_never: Aldri synkronisert
+      update_credentials: Oppdater legitimasjon
+      delete: Slett
+      no_accounts_title: Ingen kontoer funnet
+      no_accounts_message: Coinbase-lommebokene dine vises her etter synkronisering.
+      setup_needed: Lommeboker klare til import
+      setup_description: Velg hvilke Coinbase-lommeboker du vil spore.
+      setup_action: Importer lommeboker
+      import_wallets_menu: Importer lommeboker
+      more_wallets_available:
+        one: "%{count} lommebok til tilgjengelig for import"
+        other: "%{count} lommeboker til tilgjengelige for import"
+    select_existing_account:
+      title: Koble til Coinbase-konto
+      no_accounts_found: Ingen Coinbase-kontoer funnet.
+      wait_for_sync: Vent til Coinbase er ferdig med å synkronisere
+      check_provider_health: Kontroller at Coinbase API-legitimasjonen din er gyldig
+      balance: Saldo
+      currently_linked_to: "Koblet til: %{account_name}"
+      link: Koble til
+      cancel: Avbryt
+    link_existing_account:
+      success: Koblet til Coinbase-konto
+      errors:
+        only_manual: Kun manuelle kontoer kan kobles til Coinbase
+        invalid_coinbase_account: Ugyldig Coinbase-konto
+  coinbase_item:
+    syncer:
+      checking_credentials: Sjekker legitimasjon...
+      credentials_invalid: Ugyldig API-legitimasjon. Kontroller API-nokkel og hemmelighet.
+      importing_accounts: Importerer kontoer fra Coinbase...
+      checking_configuration: Sjekker kontokonfigurasjon...
+      accounts_need_setup:
+        one: "%{count} konto trenger oppsett"
+        other: "%{count} kontoer trenger oppsett"
+      processing_accounts: Behandler kontodata...
+      calculating_balances: Beregner saldoer...

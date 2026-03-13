@@ -1,0 +1,63 @@
+---
+nb:
+  coinstats_items:
+    create:
+      success: CoinStats-leverandortilkobling konfigurert.
+      default_name: CoinStats-tilkobling
+      errors:
+        validation_failed: "Validering mislyktes: %{message}."
+    update:
+      success: CoinStats-leverandortilkobling oppdatert.
+      errors:
+        validation_failed: "Validering mislyktes: %{message}."
+    destroy:
+      success: CoinStats-leverandortilkobling planlagt for sletting.
+    link_wallet:
+      success: "%{count} kryptolommebok(er) koblet til."
+      missing_params: "Manglende pakrevde parametere: adresse og blokkjede."
+      failed: Tilkobling av kryptolommebok mislyktes.
+      error: "Tilkobling av kryptolommebok mislyktes: %{message}."
+    new:
+      title: Koble til en kryptolommebok med CoinStats
+      blockchain_fetch_error: Kunne ikke laste blokkjeder. Provt igjen senere.
+      address_label: Adresse
+      address_placeholder: Pakrevet
+      blockchain_label: Blokkjede
+      blockchain_placeholder: Pakrevet
+      blockchain_select_blank: Velg en blokkjede
+      link: Koble til kryptolommebok
+      not_configured_title: CoinStats-leverandortilkobling ikke konfigurert
+      not_configured_message: For å koble til en kryptolommebok må du forst konfigurere CoinStats-leverandortilkoblingen.
+      not_configured_step1_html: Ga til <strong>Innstillinger → Leverandorer</strong>
+      not_configured_step2_html: Finn <strong>CoinStats</strong>-leverandoren
+      not_configured_step3_html: Folg <strong>oppsettinstruksjonene</strong> for å fullore konfigurasjonen
+      go_to_settings: Ga til leverandorinnstillinger
+      setup_instructions: "Oppsettinstruksjoner:"
+      step1_html: Besok <a href="https://openapi.coinstats.app/" class="link" target="_blank" rel="noopener noreferrer">CoinStats Public API Dashboard</a> for å fa en API-nokkel.
+      step2: Skriv inn API-nokkelen din nedenfor og klikk Konfigurer.
+      step3_html: Etter en vellykket tilkobling, ga til <a href="%{accounts_url}" class="link" data-turbo-frame="_top">Kontoer</a>-fanen for å sette opp kryptolommeboker.
+      api_key_label: API-nokkel
+      api_key_placeholder: Pakrevet
+      configure: Konfigurer
+      update_configuration: Rekonfigurer
+      default_name: CoinStats-tilkobling
+      status_configured_html: Klar til bruk
+      status_not_configured: Ikke konfigurert
+    coinstats_item:
+      deletion_in_progress: Kryptolommebok-data slettes...
+      provider_name: CoinStats
+      syncing: Synkroniserer...
+      sync_status:
+        no_accounts: Ingen kryptolommeboker funnet
+        all_synced:
+          one: "%{count} kryptolommebok synkronisert"
+          other: "%{count} kryptolommeboker synkronisert"
+        partial_sync: "%{linked_count} kryptolommeboker synkronisert, %{unlinked_count} trenger oppsett"
+      reconnect: Koble til pa nytt
+      status: Sist synkronisert for %{timestamp} siden
+      status_never: Aldri synkronisert
+      status_with_summary: "Sist synkronisert for %{timestamp} siden • %{summary}"
+      update_api_key: Oppdater API-nokkel
+      delete: Slett
+      no_wallets_title: Ingen kryptolommeboker tilkoblet
+      no_wallets_message: Ingen kryptolommeboker er for oyeblikket tilkoblet CoinStats.

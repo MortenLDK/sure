@@ -1,0 +1,188 @@
+---
+nb:
+  snaptrade_items:
+    default_name: "SnapTrade-tilkobling"
+    create:
+      success: "SnapTrade konfigurert."
+    update:
+      success: "SnapTrade-konfigurasjon oppdatert."
+    destroy:
+      success: "SnapTrade-tilkobling planlagt for sletting."
+    connect:
+      decryption_failed: "Kan ikke lese SnapTrade-legitimasjon. Slett og opprett denne tilkoblingen pa nytt."
+      connection_failed: "Kunne ikke koble til SnapTrade: %{message}"
+    callback:
+      success: "Meglerforbindelse koblet til! Velg hvilke kontoer du vil koble til."
+      no_item: "SnapTrade-konfigurasjon ikke funnet."
+    complete_account_setup:
+      success:
+        one: "Koblet til %{count} konto."
+        other: "Koblet til %{count} kontoer."
+      partial_success: "Koblet til %{linked} konto(er). %{failed} mislyktes."
+      link_failed: "Kunne ikke koble til kontoer: %{errors}"
+      no_accounts: "Ingen kontoer ble valgt for tilkobling."
+    preload_accounts:
+      not_configured: "SnapTrade er ikke konfigurert."
+    select_accounts:
+      not_configured: "SnapTrade er ikke konfigurert."
+    select_existing_account:
+      not_found: "Konto eller SnapTrade-konfigurasjon ikke funnet."
+      title: "Koble til SnapTrade-konto"
+      header: "Koble til eksisterende konto"
+      subtitle: "Velg en SnapTrade-konto å koble til"
+      no_accounts: "Ingen ukoblede SnapTrade-kontoer tilgjengelige."
+      connect_hint: "Du trenger kanskje å koble til en megler forst."
+      settings_link: "Ga til Leverandorinnstillinger"
+      linking_to: "Kobler til konto:"
+      balance_label: "Saldo:"
+      link_button: "Koble til"
+      cancel_button: "Avbryt"
+    link_existing_account:
+      success: "Koblet til SnapTrade-konto."
+      failed: "Kunne ikke koble til konto: %{message}"
+      not_found: "Konto ikke funnet."
+    connections:
+      unknown_brokerage: "Ukjent megler"
+    delete_connection:
+      success: "Tilkobling slettet. En plass frigjort."
+      failed: "Kunne ikke slette tilkobling: %{message}"
+      missing_authorization_id: "Manglende autorisasjons-ID"
+      api_deletion_failed: "Kunne ikke slette tilkobling fra SnapTrade - manglende legitimasjon. Tilkoblingen kan fortsatt eksistere i SnapTrade-kontoen din."
+    delete_orphaned_user:
+      success: "Foreldet registrering slettet."
+      failed: "Kunne ikke slette foreldet registrering."
+    setup_accounts:
+      title: "Sett opp SnapTrade-kontoer"
+      header: "Sett opp SnapTrade-kontoene dine"
+      subtitle: "Velg hvilke meglerkontoer du vil koble til"
+      syncing: "Henter kontoene dine..."
+      loading: "Henter kontoer fra SnapTrade..."
+      loading_hint: "Klikk Oppdater for å se etter kontoer."
+      refresh: "Oppdater"
+      info_title: "SnapTrade investeringsdata"
+      info_holdings: "Beholdninger med gjeldende priser og antall"
+      info_cost_basis: "Kostnadsbasis per posisjon (nar tilgjengelig)"
+      info_activities: "Handelshistorikk med aktivitetsetiketter (Kjop, Salg, Utbytte osv.)"
+      info_history: "Opptil 3 ars transaksjonshistorikk"
+      free_tier_note: "SnapTrade gratisniva tillater 5 meglerforbindelser. Sjekk SnapTrade-dashbordet ditt for gjeldende bruk."
+      no_accounts_title: "Ingen kontoer funnet"
+      no_accounts_message: "Ingen meglerkontoer ble funnet. Dette kan skje hvis du avbrote tilkoblingen eller megleren din ikke stttes."
+      try_again: "Koble til megler"
+      back_to_settings: "Tilbake til innstillinger"
+      available_accounts: "Tilgjengelige kontoer"
+      balance_label: "Saldo:"
+      account_number: "Konto:"
+      create_button: "Opprett valgte kontoer"
+      cancel_button: "Avbryt"
+      creating: "Oppretter kontoer..."
+      done_button: "Ferdig"
+      or_link_existing: "Eller koble til en eksisterende konto i stedet for å opprette en ny:"
+      select_account: "Velg en konto..."
+      link_button: "Koble til"
+      linked_accounts: "Allerede koblet til"
+      linked_to: "Koblet til:"
+    snaptrade_item:
+      accounts_need_setup:
+        one: "%{count} konto trenger oppsett"
+        other: "%{count} kontoer trenger oppsett"
+      deletion_in_progress: "Sletting pagar..."
+      syncing: "Synkroniserer..."
+      requires_update: "Tilkobling trenger oppdatering"
+      error: "Synkroniseringsfeil"
+      status: "Sist synkronisert for %{timestamp} siden - %{summary}"
+      status_never: "Aldri synkronisert"
+      reconnect: "Koble til pa nytt"
+      connect_brokerage: "Koble til megler"
+      add_another_brokerage: "Koble til en annen megler"
+      delete: "Slett"
+      setup_needed: "Kontoer trenger oppsett"
+      setup_description: "Noen kontoer fra SnapTrade må kobles til Sure-kontoer."
+      setup_action: "Sett opp kontoer"
+      setup_accounts_menu: "Sett opp kontoer"
+      manage_connections: "Administrer tilkoblinger"
+      more_accounts_available:
+        one: "%{count} konto til tilgjengelig for oppsett"
+        other: "%{count} kontoer til tilgjengelige for oppsett"
+      no_accounts_title: "Ingen kontoer funnet"
+      no_accounts_description: "Koble til en megler for å importere investeringskontoene dine."
+
+  providers:
+    snaptrade:
+      name: "SnapTrade"
+      connection_description: "Koble til megleren din via SnapTrade (25+ meglere stottet)"
+      description: "SnapTrade kobler til 25+ store meglere (Fidelity, Vanguard, Schwab, Robinhood osv.) og gir full handelshistorikk med aktivitetsetiketter og kostnadsbasis."
+      setup_title: "Oppsettinstruksjoner:"
+      step_1_html: "Opprett en konto pa <a href=\"https://dashboard.snaptrade.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary underline\">dashboard.snaptrade.com</a>"
+      step_2: "Kopier klient-ID og forbrukernokkel fra dashbordet"
+      step_3: "Skriv inn legitimasjonen din nedenfor og klikk Lagre"
+      step_4: "Ga til Kontoer-siden og bruk 'Koble til en annen megler' for å koble til investeringskontoene dine"
+      free_tier_warning: "Gratisniva inkluderer 5 meglerforbindelser. Ytterligere tilkoblinger krever en betalt SnapTrade-plan."
+      client_id_label: "Klient-ID"
+      client_id_placeholder: "Skriv inn SnapTrade klient-ID"
+      client_id_update_placeholder: "Skriv inn ny klient-ID for å oppdatere"
+      consumer_key_label: "Forbrukernokkel"
+      consumer_key_placeholder: "Skriv inn SnapTrade forbrukernokkel"
+      consumer_key_update_placeholder: "Skriv inn ny forbrukernokkel for å oppdatere"
+      save_button: "Lagre konfigurasjon"
+      update_button: "Oppdater konfigurasjon"
+      status_connected:
+        one: "%{count} konto fra SnapTrade"
+        other: "%{count} kontoer fra SnapTrade"
+      needs_setup:
+        one: "%{count} trenger oppsett"
+        other: "%{count} trenger oppsett"
+      status_ready: "Klar til å koble til meglere"
+      status_needs_registration: "Legitimasjon lagret. Ga til Kontoer-siden for å koble til meglere."
+      status_not_configured: "Ikke konfigurert"
+      setup_accounts_button: "Sett opp kontoer"
+      connect_button: "Koble til megler"
+      connected_brokerages: "Tilkoblet:"
+      manage_connections: "Administrer tilkoblinger"
+      connection_limit_info: "SnapTrade gratisniva tillater 5 meglerforbindelser. Slett ubrukte tilkoblinger for å frigjore plasser."
+      loading_connections: "Laster tilkoblinger..."
+      connections_error: "Kunne ikke laste tilkoblinger: %{message}"
+      accounts_count:
+        one: "%{count} konto"
+        other: "%{count} kontoer"
+      orphaned_connection: "Foreldet tilkobling (ikke synkronisert lokalt)"
+      needs_linking: "trenger tilkobling"
+      no_connections: "Ingen meglerforbindelser funnet."
+      delete_connection: "Slett"
+      delete_connection_title: "Slett meglerforbindelse?"
+      delete_connection_body: "Dette vil permanent fjerne %{brokerage}-tilkoblingen fra SnapTrade. Alle kontoer fra denne megleren vil bli koblet fra. Du må koble til pa nytt for å synkronisere disse kontoene igjen."
+      delete_connection_confirm: "Slett tilkobling"
+      orphaned_users_title:
+        one: "%{count} foreldet registrering"
+        other: "%{count} foreldede registreringer"
+      orphaned_users_description: "Dette er tidligere SnapTrade-brukerregistreringer som bruker tilkoblingsplassene dine. Slett dem for å frigjore plasser."
+      orphaned_user: "Foreldet registrering"
+      delete_orphaned_user: "Slett"
+      delete_orphaned_user_title: "Slett foreldet registrering?"
+      delete_orphaned_user_body: "Dette vil permanent slette denne foreldede SnapTrade-brukeren og alle deres meglerforbindelser, og frigjore tilkoblingsplasser."
+      delete_orphaned_user_confirm: "Slett registrering"
+
+  snaptrade_item:
+    sync_status:
+      no_accounts: "Ingen kontoer funnet"
+      synced:
+        one: "%{count} konto synkronisert"
+        other: "%{count} kontoer synkronisert"
+      synced_with_setup: "%{linked} synkronisert, %{unlinked} trenger oppsett"
+    institution_summary:
+      none: "Ingen institusjoner tilkoblet"
+      count:
+        one: "%{count} institusjon"
+        other: "%{count} institusjoner"
+    brokerage_summary:
+      none: "Ingen meglere tilkoblet"
+      count:
+        one: "%{count} megler"
+        other: "%{count} meglere"
+    syncer:
+      discovering: "Oppdager kontoer..."
+      importing: "Importerer kontoer fra SnapTrade..."
+      processing: "Behandler beholdninger og aktiviteter..."
+      calculating: "Beregner saldoer..."
+      checking_config: "Sjekker kontokonfigurasjon..."
+      needs_setup: "%{count} kontoer trenger oppsett..."
+      activities_fetching_async: "Aktiviteter hentes i bakgrunnen. Dette kan ta opptil ett minutt for nye meglerforbindelser."
