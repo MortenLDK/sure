@@ -46,7 +46,7 @@ module KirkvikCategories
       icon: "bus",
       classification: "expense",
       subcategories: [
-        "Transport",
+        "Kollektivtransport",
         "Ryde",
         "Diesel",
         "Ved"
@@ -58,7 +58,7 @@ module KirkvikCategories
       icon: "drama",
       classification: "expense",
       subcategories: [
-        "Helse",
+        "Helseutgifter",
         "Lunsj",
         "Ferie",
         "Restaurant",
