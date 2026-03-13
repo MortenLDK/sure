@@ -89,15 +89,22 @@ en:
       success: Kept as separate transactions
       failure: Could not dismiss duplicate suggestion
     header:
+      new_rule: New rule
+      edit_rules: Edit rules
       edit_categories: Edit categories
       edit_imports: Edit imports
       edit_merchants: Edit merchants
       edit_tags: Edit tags
       import: Import
     index:
+      title: Transactions
       transaction: transaction
       transactions: transactions
       import: Import
+    summary:
+      total_transactions: Total transactions
+      income: Income
+      expenses: Expenses
     list:
       drag_drop_title: Drop CSV to import
       drag_drop_subtitle: Upload transactions directly
@@ -196,3 +203,5 @@ en:
         less_than: less than
       form:
         toggle_selection_checkboxes: Toggle all checkboxes
+        search_placeholder: "Search transactions ..."
+        filter: Filter

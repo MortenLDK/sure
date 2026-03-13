@@ -25,7 +25,7 @@ module Sure
     # config.eager_load_paths << Rails.root.join("extras")
 
     # TODO: This is here for incremental adoption of localization.  This can be removed when all translations are implemented.
-    config.i18n.fallbacks = true
+    config.i18n.fallbacks = [:en]
     config.i18n.default_locale = :nb
     config.i18n.available_locales = [:nb, :en]
     config.time_zone = "Europe/Oslo"
