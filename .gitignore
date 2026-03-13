@@ -69,7 +69,11 @@ coverage
 # Ignore node related files
 node_modules
 
-compose.yml
+# compose.yml is tracked in Kirkvik fork (Kamal companion + local dev)
+# compose.yml
+
+# Kamal secrets — contains real credentials, never commit
+.kamal/secrets
 
 plaid_test_accounts/
 

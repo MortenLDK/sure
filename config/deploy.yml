@@ -1,0 +1,100 @@
+# config/deploy.yml — Kamal 2 deployment for Kirkvik Finance (Sure fork)
+#
+# Deploy with: kamal deploy
+# First time:  kamal setup
+#
+# Prerequisites:
+#   1. Fork this repo to your personal GitHub account
+#   2. Replace GITHUB_USERNAME with your GitHub username (fork owner)
+#   3. Fill in DROPLET_IP_HERE with the DigitalOcean droplet IP (done in Plan 04)
+#   4. Set secrets in .kamal/secrets (copy from .kamal/secrets.example, fill in values)
+#   5. Ensure SSH access to the server (add your public key to the droplet)
+#   6. Install Kamal locally: gem install kamal
+#   7. Create GHCR PAT with write:packages scope at https://github.com/settings/tokens
+
+service: sure-kirkvik
+
+# GHCR: free for private repos on any GitHub plan, Kamal supports it natively.
+# Replace GITHUB_USERNAME with the username of the account that owns the fork.
+image: ghcr.io/GITHUB_USERNAME/sure-kirkvik
+
+servers:
+  web:
+    hosts:
+      # Fill in the DigitalOcean droplet IP address during Plan 04
+      - DROPLET_IP_HERE
+
+proxy:
+  ssl: true
+  host: frihetsformuen.no
+  app_port: 3000
+
+registry:
+  server: ghcr.io
+  username: GITHUB_USERNAME
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+# Build from Sure's existing Dockerfile — no separate Dockerfile.kirkvik needed.
+# The Dockerfile's COPY . . includes our locale files, rake tasks, and seeds.
+builder:
+  arch: amd64
+
+env:
+  clear:
+    RAILS_FORCE_SSL: "true"
+    RAILS_ASSUME_SSL: "true"
+    SELF_HOSTED: "true"
+    APP_DOMAIN: frihetsformuen.no
+    DB_HOST: sure-kirkvik-db
+    DB_PORT: 5432
+    REDIS_URL: redis://sure-kirkvik-redis:6379/1
+    TZ: "Europe/Oslo"
+  secret:
+    - SECRET_KEY_BASE
+    - POSTGRES_USER
+    - POSTGRES_PASSWORD
+    - POSTGRES_DB
+
+accessories:
+  db:
+    image: postgres:16
+    host: DROPLET_IP_HERE
+    port: "127.0.0.1:5432:5432"
+    env:
+      clear:
+        TZ: "Europe/Oslo"
+      secret:
+        - POSTGRES_USER
+        - POSTGRES_PASSWORD
+        - POSTGRES_DB
+    volumes:
+      - sure-kirkvik-db-data:/var/lib/postgresql/data
+    options:
+      restart: unless-stopped
+      health-cmd: "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"
+      health-interval: 5s
+      health-timeout: 5s
+      health-retries: 5
+
+  redis:
+    image: redis:7-alpine
+    host: DROPLET_IP_HERE
+    port: "127.0.0.1:6379:6379"
+    # maxmemory 256mb: prevents OOM on 4GB droplet (Rails ~1GB, PG ~1GB, Redis 256MB, Sidekiq ~512MB)
+    # appendonly yes: persistence — Redis data survives container restart
+    cmd: "redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru --appendonly yes --appendfsync everysec"
+    volumes:
+      - sure-kirkvik-redis-data:/data
+    options:
+      restart: unless-stopped
+      memory: 512m
+      health-cmd: "redis-cli ping"
+      health-interval: 5s
+      health-timeout: 5s
+      health-retries: 5
+
+volumes:
+  - "app-storage:/rails/storage"
+
+asset_path: /rails/public/assets
