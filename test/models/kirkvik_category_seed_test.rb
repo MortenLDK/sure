@@ -8,10 +8,10 @@ class KirkvikCategorySeedTest < ActiveSupport::TestCase
     @family.categories.where(name: KirkvikCategories::CATEGORIES.map { |c| c[:name] }).destroy_all
   end
 
-  test "seeds 8 parent categories" do
+  test "seeds 6 parent categories" do
     KirkvikCategories.seed!(@family)
     parents = @family.categories.where(parent_id: nil).where(name: KirkvikCategories::CATEGORIES.map { |c| c[:name] })
-    assert_equal 8, parents.count
+    assert_equal 6, parents.count
   end
 
   test "seeds correct parent category names" do

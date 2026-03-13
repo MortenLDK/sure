@@ -2,7 +2,7 @@
 
 # Kirkvik family budget categories — seeded from Hjemme budsjett.xlsx structure
 #
-# 8 parent categories with 31 subcategories total.
+# 6 parent categories with 31 subcategories total.
 # Norwegian Bokmål names with proper UTF-8 characters.
 #
 # Usage:
@@ -46,7 +46,7 @@ module KirkvikCategories
       icon: "bus",
       classification: "expense",
       subcategories: [
-        "Kollektivtransport",
+        "Transport",
         "Ryde",
         "Diesel",
         "Ved"
@@ -58,7 +58,7 @@ module KirkvikCategories
       icon: "drama",
       classification: "expense",
       subcategories: [
-        "Helseutgifter",
+        "Helse",
         "Lunsj",
         "Ferie",
         "Restaurant",
@@ -92,20 +92,6 @@ module KirkvikCategories
         "MORRO"
       ]
     },
-    {
-      name: "Helse",
-      color: "#4da568",
-      icon: "stethoscope",
-      classification: "expense",
-      subcategories: []
-    },
-    {
-      name: "Utdanning",
-      color: "#2563eb",
-      icon: "graduation-cap",
-      classification: "expense",
-      subcategories: []
-    }
   ].freeze
 
   # Idempotent seed — safe to run multiple times.
