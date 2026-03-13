@@ -118,12 +118,12 @@ module KirkvikCategories
       parent = family.categories.find_or_create_by!(name: cat_data[:name]) do |c|
         c.color = cat_data[:color]
         c.lucide_icon = cat_data[:icon]
-        c.classification = cat_data[:classification]
+        c.classification_unused = cat_data[:classification]
       end
 
       cat_data[:subcategories].each do |sub_name|
         family.categories.find_or_create_by!(name: sub_name, parent: parent) do |c|
-          c.classification = cat_data[:classification]
+          c.classification_unused = cat_data[:classification]
           c.lucide_icon = "tag"
           # Do NOT set color — inherit_color_from_parent callback handles it
         end
