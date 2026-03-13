@@ -70,7 +70,6 @@ accessories:
     volumes:
       - sure-kirkvik-db-data:/var/lib/postgresql/data
     options:
-      restart: unless-stopped
       health-cmd: "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"
       health-interval: 5s
       health-timeout: 5s
@@ -86,7 +85,6 @@ accessories:
     volumes:
       - sure-kirkvik-redis-data:/data
     options:
-      restart: unless-stopped
       memory: 512m
       health-cmd: "redis-cli ping"
       health-interval: 5s
