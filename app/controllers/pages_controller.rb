@@ -26,11 +26,11 @@ class PagesController < ApplicationController
 
     @dashboard_sections = build_dashboard_sections
 
-    @breadcrumbs = [ [ "Home", root_path ], [ "Dashboard", nil ] ]
+    @breadcrumbs = [ [ t("breadcrumbs.home", default: "Home"), root_path ], [ t("breadcrumbs.pages", default: "Dashboard"), nil ] ]
   end
 
   def intro
-    @breadcrumbs = [ [ "Home", chats_path ], [ "Intro", nil ] ]
+    @breadcrumbs = [ [ t("breadcrumbs.home", default: "Home"), chats_path ], [ "Intro", nil ] ]
   end
 
   def update_preferences

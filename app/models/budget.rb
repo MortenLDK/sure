@@ -118,7 +118,7 @@ class Budget < ApplicationRecord
         end_date: end_date.strftime("%b %d, %Y")
       )
     else
-      I18n.t("budgets.name.month_year", month: start_date.strftime("%B %Y"))
+      I18n.t("budgets.name.month_year", month: I18n.l(start_date, format: "%B %Y"))
     end
   end
 

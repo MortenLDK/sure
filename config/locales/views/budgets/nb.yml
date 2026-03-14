@@ -4,10 +4,43 @@ nb:
     name:
       custom_range: "%{start} - %{end_date}"
       month_year: "%{month}"
+    header:
+      today: I dag
+    donut:
+      spent: Brukt
+      new_budget: Nytt budsjett
+      unused: Ubrukt
+      of_budget: "av %{amount}"
+    categories:
+      title: Kategorier
+      amount: Beløp
+    actuals_summary:
+      income: Inntekt
+      expenses: Utgifter
+    budgeted_summary:
+      expected_income: Forventet inntekt
+      title: Budsjettert
+      earned: "opptjent"
+      over: "over"
+      left: "igjen"
+      spent: "brukt"
     show:
       tabs:
         actual: Faktisk
         budgeted: Budsjettert
+      categories: Kategorier
+      edit: Rediger
+    edit:
+      title: Sett opp budsjettet ditt
+      subtitle: Angi din månedlige inntekt og planlagte utgifter nedenfor for å sette opp budsjettet.
+      budgeted_spending: Budsjettert utgift
+      expected_income: Forventet inntekt
+      autosuggest_title: Autoforslag for inntekt og utgiftsbudsjett
+      autosuggest_description: Dette vil baseres på transaksjonshistorikken. AI kan gjøre feil, bekreft før du fortsetter.
+      continue: Fortsett
+    over_allocation_warning:
+      message: Du har overallokert budsjettet ditt. Vennligst fiks allokeringene.
+      fix: Fiks allokeringer
     copy_previous_prompt:
       title: "Sett opp budsjettet ditt"
       description: "Du kan kopiere budsjettet fra %{source_name} eller starte på nytt."

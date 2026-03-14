@@ -1,6 +1,12 @@
 ---
 nb:
   breadcrumbs:
+    budget_categories: Budsjettkategorier
+    budgets: Budsjett
     exports: Eksporter
+    family_merchants: Forhandlere
     home: Hjem
     imports: Importer
+    pages: Oversikt
+    reports: Rapporter
+    transactions: Transaksjoner
