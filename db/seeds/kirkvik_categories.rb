@@ -2,7 +2,7 @@
 
 # Kirkvik family budget categories — seeded from Hjemme budsjett.xlsx structure
 #
-# 6 parent categories with 31 subcategories total.
+# 7 parent categories with 32 subcategories total.
 # Norwegian Bokmål names with proper UTF-8 characters.
 #
 # Usage:
@@ -20,8 +20,6 @@ module KirkvikCategories
       classification: "expense",
       subcategories: [
         "Lånerente",
-        "Avdrag",
-        "Renovering",
         "Kommunale avgifter",
         "Strøm",
         "Starlink Internet",
@@ -73,6 +71,16 @@ module KirkvikCategories
       classification: "expense",
       subcategories: [
         "Abonnement"
+      ]
+    },
+    {
+      name: "Investering & Gjeld",
+      color: "#22c55e",
+      icon: "trending-up",
+      classification: "expense",
+      subcategories: [
+        "Renovering",
+        "Avdrag"
       ]
     },
     {

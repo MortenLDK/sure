@@ -5,7 +5,7 @@
 # Run via local: docker compose exec web rails kirkvik:seed
 
 namespace :kirkvik do
-  desc "Seed Kirkvik budget categories (6 parents + subcategories) for the first family"
+  desc "Seed Kirkvik budget categories (7 parents + subcategories) for the first family"
   task seed: :environment do
     require_relative "../../db/seeds/kirkvik_categories"
 
@@ -32,6 +32,26 @@ namespace :kirkvik do
       puts "Cleanup: removed #{phantom_helse_count} phantom Helse parent(s), #{phantom_utdanning_count} phantom Utdanning parent(s), renamed #{kollektiv_renamed} Kollektivtransport → Transport, renamed #{helseutgifter_renamed} Helseutgifter → Helse"
     else
       puts "Cleanup: nothing to fix (already clean)"
+    end
+
+    # Move Avdrag and Renovering from Bolig & Lån to Investering & Gjeld
+    bolig = family.categories.find_by(name: "Bolig & Lån", parent_id: nil)
+    if bolig
+      invest_parent = family.categories.find_or_create_by!(name: "Investering & Gjeld") do |c|
+        c.color = "#22c55e"
+        c.lucide_icon = "trending-up"
+        c.classification_unused = "expense"
+      end
+
+      moved = []
+      %w[Avdrag Renovering].each do |sub_name|
+        sub = family.categories.find_by(name: sub_name, parent_id: bolig.id)
+        if sub
+          sub.update!(parent_id: invest_parent.id)
+          moved << sub_name
+        end
+      end
+      puts "Moved #{moved.join(', ')} to Investering & Gjeld" if moved.any?
     end
 
     KirkvikCategories.seed!(family)
